@@ -54,14 +54,9 @@ const Create = () => {
       
       console.log('Adding card to Firestore...');
       console.log('Data being sent to Firestore:', { ...formData, avatarUrl: uploadedAvatarUrl });
-      try {
-        const cardoraId = await addCardora({ ...formData, avatarUrl: uploadedAvatarUrl });
-        console.log('Card added with ID:', cardoraId);
-      } catch (firestoreError) {
-        console.error('Firestore error:', firestoreError);
-        console.error('Firestore error message:', firestoreError instanceof Error ? firestoreError.message : 'Unknown');
-        throw firestoreError;
-      }
+      
+      const cardoraId = await addCardora({ ...formData, avatarUrl: uploadedAvatarUrl });
+      console.log('Card added with ID:', cardoraId);
       
       const encodedId = encodeURIComponent(encryptValue(cardoraId));
       console.log('Encoded ID:', encodedId);
@@ -173,7 +168,7 @@ const Create = () => {
             className="w-full text-white transition duration-300 bg-transparent border hover:bg-black-secondary/20 flex items-center justify-center gap-2"
             onClick={handleShareOnX}
           >
-            <XIcon className="size-4" />
+            <XIcon />
             Share on X
           </Button>
           <Button
