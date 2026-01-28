@@ -1,8 +1,8 @@
-# Cardora 🎴
+# Cardora
 
 Create and share beautiful digital business cards with ease.
 
-## Features ✨
+## Features
 
 - **Create Cards** - Design personalized digital business cards with custom information
 - **Share Instantly** - Generate QR codes and shareable links
@@ -11,7 +11,7 @@ Create and share beautiful digital business cards with ease.
 - **Secure** - Encrypted card IDs and secure Firebase storage
 - **Offline Support** - IndexedDB for local data persistence
 
-## Tech Stack 🛠️
+## Tech Stack
 
 - **React 18** - Modern UI library
 - **TypeScript** - Type-safe development
@@ -21,7 +21,7 @@ Create and share beautiful digital business cards with ease.
 - **React Hook Form + Zod** - Form validation
 - **Axios** - API requests
 
-## Getting Started 🚀
+## Getting Started
 
 ### Prerequisites
 
@@ -61,14 +61,14 @@ VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
 VITE_FIREBASE_APP_ID=your_app_id
 ```
 
-## Usage 📱
+## Usage
 
 1. **Create** - Navigate to `/create` and fill in your details
 2. **Share** - Generate a shareable link and QR code
 3. **Discover** - Browse public cards in the community
 4. **Collection** - Manage your saved cards
 
-## Deployment 🚀
+## Deployment
 
 Deploy to Vercel with one click:
 
@@ -80,11 +80,11 @@ npm i -g vercel
 vercel --prod
 ```
 
-## License 📄
+## License
 
 MIT License - feel free to use this project for your own purposes.
 
-## Author 👨‍💻
+## Author
 
 Built with ❤️ by Aman
 
