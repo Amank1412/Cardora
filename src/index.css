@@ -1,0 +1,26 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Projekt Blackbird';
+    src: url('@/assets/fonts/projekt-blackbird.woff2') format('woff2'),
+      url('@/assets/fonts/projekt-blackbird.woff') format('woff'),
+      url('@/assets/fonts/projekt-blackbird.ttf') format('truetype'),
+      url('@/assets/fonts/projekt-blackbird.otf') format('opentype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+  body {
+    @apply font-projekt-blackbird antialiased min-h-svh sm:min-h-screen text-white selection:text-black selection:bg-white;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(255, 80, 120, 0.25), transparent 70%), #000000;
+  }
+  ::-webkit-scrollbar {
+    @apply w-1;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-[#303030];
+  }
+}
