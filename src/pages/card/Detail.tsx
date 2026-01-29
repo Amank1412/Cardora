@@ -41,8 +41,7 @@ const Detail = () => {
         const ownershipStatus = await isIdInDB('Personal', decryptedId);
         setHasOwnership(ownershipStatus);
 
-        const localData = await findId('Personal', decryptedId);
-        // if (localData?.shortUrl) setShortUrl(localData.shortUrl);
+        // await findId('Personal', decryptedId); // No longer used
 
         const data = await getCardoraById(decryptedId);
         if (data) setCardora(data as FormData);
@@ -355,7 +354,7 @@ const Detail = () => {
             email,
             phone,
             about,
-            avatar: avatarUrl || '',
+            avatar: avatarUrl ? avatarUrl : '',
             company,
             jobTitle,
             website,
