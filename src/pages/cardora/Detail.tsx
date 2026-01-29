@@ -42,7 +42,7 @@ const Detail = () => {
         setHasOwnership(ownershipStatus);
 
         const localData = await findId('Personal', decryptedId);
-        if (localData?.shortUrl) setShortUrl(localData.shortUrl);
+        // if (localData?.shortUrl) setShortUrl(localData.shortUrl;
 
         const data = await getCardoraById(decryptedId);
         if (data) setCardora(data as FormData);
