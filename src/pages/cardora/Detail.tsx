@@ -27,7 +27,7 @@ const Detail = () => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [isFavorite, setIsFavorite] = useState<boolean>(false);
   const [hasOwnership, setHasOwnership] = useState<boolean>(false);
-  const [shortUrl, setShortUrl] = useState<string | null>(null);
+
 
   const decryptId = (id: string | undefined) => (id ? decryptValue(id) : null);
 
@@ -355,7 +355,7 @@ const Detail = () => {
             email,
             phone,
             about,
-            avatar: avatarUrl,
+            avatar: avatarUrl || '',
             company,
             jobTitle,
             website,
