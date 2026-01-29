@@ -1,7 +1,7 @@
 import { useEffect, useState, SyntheticEvent } from 'react';
 import { useNavigate, useParams, Link } from 'react-router-dom';
 import { Layout } from '@/components/layout';
-import { ActionMenu, AlertCard, Button, Modal, Spinner, Tooltip, QrCode } from '@/components/ui';
+import { ActionMenu, AlertCard, Button, Modal, Spinner, Tooltip, CardDownload } from '@/components/ui';
 import {
   Email,
   Facebook,
@@ -348,7 +348,22 @@ const Detail = () => {
         </div>
       </div>
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <QrCode title={`${firstName} ${lastName}`} value={shortUrl || ''} />
+        <CardDownload
+          cardData={{
+            firstName,
+            lastName,
+            email,
+            phone,
+            about,
+            avatar: avatarUrl,
+            company,
+            jobTitle,
+            website,
+            linkedin,
+            github,
+            x,
+          }}
+        />
       </Modal>
     </Layout>
   );

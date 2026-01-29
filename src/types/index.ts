@@ -71,11 +71,6 @@ export interface ScrollShadowProps {
   className?: string;
 }
 
-export interface QrCodeProps {
-  title: string;
-  value: string;
-}
-
 export interface TabData {
   label: string;
   content: ReactNode;
