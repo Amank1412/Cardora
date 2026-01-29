@@ -16,7 +16,7 @@ import {
   ArrowLeft,
 } from '@/components/icons';
 import { deleteCardoraById, getCardoraById } from '@/firebase';
-import { saveToDB, cn, decryptValue, deleteFromDB, findId, isIdInDB } from '@/utils';
+import { saveToDB, cn, decryptValue, deleteFromDB, isIdInDB } from '@/utils';
 import type { FormData } from '@/types';
 
 const Detail = () => {
@@ -349,18 +349,18 @@ const Detail = () => {
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
         <CardDownload
           cardData={{
-            firstName,
-            lastName,
-            email,
-            phone,
-            about,
+            firstName: firstName || '',
+            lastName: lastName || '',
+            email: email || '',
+            phone: phone || '',
+            about: about || '',
             avatar: avatarUrl ? avatarUrl : '',
-            company,
-            jobTitle,
-            website,
-            linkedin,
-            github,
-            x,
+            company: company || '',
+            jobTitle: jobTitle || '',
+            website: website || '',
+            linkedin: linkedin || '',
+            github: github || '',
+            x: x || '',
           }}
         />
       </Modal>
