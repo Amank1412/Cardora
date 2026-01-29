@@ -72,12 +72,12 @@ export const CardDownload = ({ cardData }: CardDownloadProps) => {
   }, [firstName, lastName]);
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 flex flex-col items-center">
       {/* Card Preview for Download */}
       <div
         ref={cardRef}
         className="bg-gradient-to-br from-black-secondary/40 via-black-secondary/30 to-black-secondary/40 backdrop-blur-md border border-white/20 rounded-2xl p-8 space-y-6"
-        style={{ width: '600px', margin: '0 auto' }}
+        style={{ width: '400px', minWidth: '400px', maxWidth: '400px', margin: '0 auto' }}
       >
         {/* Header Section */}
         <div className="flex items-center space-x-6">
@@ -167,19 +167,19 @@ export const CardDownload = ({ cardData }: CardDownloadProps) => {
       </div>
 
       {/* Action Buttons */}
-      <div className="space-y-3 max-w-[600px] mx-auto">
+      <div className="space-y-3 w-full max-w-[400px] mx-auto">
         <Button
-          className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+          className="w-full bg-black text-white border border-white/20 hover:bg-white/10"
           onClick={handleDownload}
           isDisabled={isDownloading}
         >
           {isDownloading ? 'Downloading...' : '📥 Download Card'}
         </Button>
         <Button
-          className="w-full bg-black-secondary/60 border border-white/20 hover:bg-white/10"
+          className="w-full bg-black-secondary/60 border border-white/20 hover:bg-white/10 text-white"
           onClick={handleShareOnX}
         >
-          <span className="flex items-center justify-center space-x-2">
+          <span className="flex items-center justify-center space-x-2 text-white">
             <XIcon />
             <span>Share on X (Twitter)</span>
           </span>
